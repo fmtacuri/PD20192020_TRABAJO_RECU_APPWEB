@@ -14,7 +14,7 @@ import com.distribuida.web.servicios.ServicioGateway;
 @ApplicationScoped
 public class ServicioProducer {
 
-	public static final String URL = "http://localhost:7050/gateway";
+	public static final String URL = "http://localhost:9999";
 
 	@Produces
 	@ApplicationScoped
@@ -25,7 +25,7 @@ public class ServicioProducer {
 			@Override
 			public List<UsuarioDto> listarUsuario() {
 
-				UsuarioDto[] dtos = HttpExaUtils.invoke( URL + "/usuarios", UsuarioDto[].class );
+				UsuarioDto[] dtos = HttpExaUtils.invoke( URL + "/users", UsuarioDto[].class );
 
 				return Arrays.asList(dtos);
 			}
