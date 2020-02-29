@@ -14,6 +14,7 @@ import com.distribuida.web.servicios.ServicioGateway;
 @ApplicationScoped
 public class ServicioProducer {
 
+	//Apuntado del seervidor Gateway de balanceo de carga que permite el balanceo automatico
 	public static final String URL = "http://localhost:9999";
 
 	@Produces
